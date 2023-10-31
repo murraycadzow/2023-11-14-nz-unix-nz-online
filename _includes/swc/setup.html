@@ -1,9 +1,10 @@
-{% assign curricula = "swc-gapminder|swc-inflammation"  | split: "|" %}
+{% assign curricula = "swc-gapminder|swc-inflammation" | split: "|" %}
 {% unless curricula contains site.curriculum %}
 {% include warning-curriculum.html %}
 {% endunless %}
 
 {% include install_instructions/shell.html %}
+{% comment %}
 {% include install_instructions/git.html %}
 {% include install_instructions/editor.html %}
 
@@ -17,6 +18,7 @@
 {% else %}
 {% include warning-flavor.html %}
 {% endif %}
+{% endcomment %}
 
 {% comment %}
 The following setup instructions are commented out because Carpentries workshops
